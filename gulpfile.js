@@ -1,5 +1,5 @@
-import gulp from "gulp";
-import shell from "gulp-shell";
+const gulp = require("gulp");
+const shell = require("gulp-shell");
 
 gulp.task(
   "default",
@@ -10,5 +10,6 @@ gulp.task(
   "build",
   shell.task("parcel build starter/index.html")
 );
+
 gulp.task("test", shell.task("mocha --exit"));
-gulp.task('cypress', shell.task('npx cypress run'));
+gulp.task("cypress", shell.task("npx cypress run"));
